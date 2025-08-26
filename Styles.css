@@ -1,0 +1,516 @@
+/*logo image*/
+/* Brand container (image + text) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between image and text */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Circular logo */
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ffffff; /* optional: adds a neat border */
+}
+/*nav bar*/
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Styling for the top nav bar */
+.top {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+}
+
+.bar-item {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 12px; /* smaller padding so border hugs text */
+  border: 1px solid transparent; /* default invisible border to prevent layout shift on hover */
+  border-radius: 6px; /* rounded corners */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.bar-item:hover {
+  background-color: #f0f0f0; /* light grey background */
+  color: #000;
+  border-color: #ccc; /* subtle border on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* light shadow */
+}
+
+.button {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.right {
+  display: flex;
+  gap: 10px;
+}
+
+.hide-small {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .hide-small {
+    display: flex;
+  }
+}
+
+/* Header image styling */
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text overlay positioning */
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Styling the text */
+.overlay-text h1 span {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 64px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+/* Ensure header is relatively positioned */
+header.display-container {
+  position: relative;
+}
+
+
+/* Projects Heading */
+
+.projects-heading {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  border-bottom: 3px solid #ccc;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Grid System */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.col {
+  flex: 1 1 calc(25% - 20px); /* 4 per row with spacing */
+  max-width: calc(25% - 20px);
+}
+
+@media (max-width: 992px) {
+  .col {
+    flex: 1 1 calc(50% - 20px); /* 2 per row on medium screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .col {
+    flex: 1 1 100%; /* full width on small screens */
+    max-width: 100%;
+  }
+}
+
+/* Project Card */
+#project {
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 40px;
+}
+
+#project h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.project-card {
+  border: 2px solid #e0e0e0; /* Light grey border */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 16px;
+  background: #fff;
+  margin-bottom: 24px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #555;
+  margin-top: 12px;
+  line-height: 1.5;
+  list-style-type: none; /* Removes the bullets */
+  padding: 0; /* Optional: Removes default left padding */
+  margin: 0; /* Optional: Removes default margins */
+}
+
+/* === About Section === */
+#about {
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#about h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+  max-inline-size: 800px;
+  margin: 0 auto 40px auto;
+}
+
+/* Team Members Row */
+#team {
+  text-align: center;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 40px;
+}
+#team h3 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 8px;
+  text-decoration: #000;
+}
+.row-padding {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 16px;
+}
+
+.col {
+  flex: 1 1 calc(25% - 20px); /* 4 per row with spacing */
+  max-width: calc(25% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.col:hover {
+  transform: translateY(-5px);
+}
+
+.col img {
+  width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Center the team member image */
+.col .team-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Team Member Image Styling */
+.col .team-img {
+  width: 100%;
+  border-radius: 50%;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.col .team-img:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+/* Name & Role */
+.col h3 {
+  font-size: 20px;
+  margin-block-start: 16px;
+}
+
+.col .opacity {
+  color: #777;
+  font-size: 16px;
+  margin-block-end: 8px;
+}
+
+/* Hide name & role by default */
+.col .name-role {
+  inline-size: 100%;
+  text-align: center;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+/* Show name & role when .active is added to .name-role */
+.col .name-role.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Contact Button */
+.button {
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  inline-size: 100%;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ddd;
+}
+
+/* === Contact Section === */
+#contact {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+#contact h3 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+#contact p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+/* Contact Form */
+form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+form .button.black {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+form .button.black:hover {
+  background-color: #333;
+}
+.site-footer {
+  background-color: #f1f1f1;
+  padding: 24px 16px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-top: 60px;
+  border-top: 2px solid #e0e0e0;
+  padding-top: 16px;
+}
+
+.site-footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Project Card Fullscreen Effect */
+.project-card.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2000;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  margin: 0;
+  border-radius: 0;
+  text-align: left;
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 40px 20px;
+}
+
+.project-card.fullscreen .project-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0;
+}
+
+.project-card.fullscreen .project-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.project-card.fullscreen .project-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.project-card.fullscreen .close-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 2100;
+}
+
+/* Prevent background scroll when project fullscreen */
+body.project-fullscreen-active {
+  overflow: hidden;
+}
+
+/* Team Member Card Fullscreen Effect - Horizontally Centered */
+.col.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3000;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  margin: 0;
+  border-radius: 0;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  padding: 40px 20px;
+}
+
+.col.fullscreen .team-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  margin-bottom: 0;
+}
+
+.col.fullscreen .name-role {
+  display: block;
+  opacity: 1;
+  width: 480px;
+  text-align: left;
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.col.fullscreen .close-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 3100;
+}
+
+/* Prevent background scroll when team member fullscreen */
+body.team-fullscreen-active {
+  overflow: hidden;
+}
