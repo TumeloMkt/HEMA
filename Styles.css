@@ -80,7 +80,7 @@
 
 /* Header image styling */
 .header-image {
-  width: 100%;
+  width: auto;
   height: auto;
   display: block;
 }
