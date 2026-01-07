@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEMA Projects</title>
     <link rel="stylesheet" href="Styles.css"> 
+    <script src="HEMAjs.js" defer></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <!--Nav Bar-->
@@ -67,13 +69,96 @@
                 <p class="project-description">
                     Bana Bona, meaning “Our Children,” is a project dedicated to creating safe and inclusive spaces for children in Lesotho. Launched in 2023, this initiative focuses on providing emotional support, creative outlets, and community engagement opportunities for children.
                     The project includes:
+                    <!--list indents to the left-->
                     <ul>
-                        <li>	🎨 Creative workshops – to encourage self-expression
-                        <li>	🤝 Community events – to foster connections among families
-                        <li>	🧠 Mental health awareness campaigns – to promote understanding and support for children’s emotional well-being
+                        <li>🎨 Creative workshops – to encourage self-expression
+                        <li>🤝 Community events – to foster connections among families
+                        <li>🧠 Mental health awareness campaigns – to promote understanding and support for children’s emotional well-being
                     </ul>
                     Through Bana Bona, HeMA aims to empower children to thrive in mind, body, and spirit, ensuring that every child feels valued and supported.
                 </p>
             </div>
         </div>
-    </div>  
+        <div>
+            <p>Pictures from our Projects Click Here</p>
+                    <a href="EventPictures.html">
+                     <img src="imges_icon.jpg" alt="Event Pictures">
+            </a>
+        </div>
+    </div> 
+    <style>
+        .project-description {
+            text-align: justify;
+            text-justify: inter-word;
+        } 
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            transition: transform 0.2s;
+            background: #f8f8f8;
+            display: block;
+        }
+        .project-img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        }
+        /* Additional styles for responsiveness and layout */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f6fa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 18px;
+            text-align: center;
+            color: #2a2a2a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 12px;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #444;
+            margin: 24px 0 12px 0;
+            text-align: center;
+        }
+        /*Change rows to vertical*/  
+        .row {
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            gap: 24px; /* Space between cards */
+        }
+        /*Width streches across the page*/
+
+        .col {
+            max-width: 700px;
+            margin: 0 auto; /* Center each card */
+            width: 100%;
+        }
+        /*Project description starts from the left*/
+        .project-description ul {
+            list-style-type: none;
+            text-align: left;
+            margin-left: 0;
+            padding-left: 24px; /* or 40px for more indent */
+        }
+        ul.no-bullets {
+            list-style-type: none;
+            padding: 0;
+        }
+
+    </style> 
+</body>

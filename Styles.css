@@ -264,7 +264,6 @@ header.display-container {
 
 .col img {
   width: 100%;
-  border-radius: 8px;
   height: auto;
 }
 
@@ -278,13 +277,12 @@ header.display-container {
 /* Team Member Image Styling */
 .col .team-img {
   width: 100%;
-  border-radius: 50%;
-  height: 180px;
+  height: 500px;
   object-fit: cover;
   margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   cursor: pointer;
   transition: box-shadow 0.3s;
+  border-radius: 10px;
 }
 
 .col .team-img:hover {
