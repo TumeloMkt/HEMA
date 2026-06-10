@@ -45,7 +45,7 @@
 .bar-item {
   text-decoration: none;
   color: #333;
-  padding: 6px 12px; /* smaller padding so border hugs text */
+  padding: 10px 20px; /* smaller padding so border hugs text */
   border: 1px solid transparent; /* default invisible border to prevent layout shift on hover */
   border-radius: 6px; /* rounded corners */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
