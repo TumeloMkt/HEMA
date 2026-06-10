@@ -55,12 +55,6 @@
   background-color: #f0f0f0; /* light grey background */
   color: #000;
 }
-
-.button {
-  font-weight: bold;
-  font-size: 16px;
-}
-
 .right {
   display: flex;
   gap: 10px;
