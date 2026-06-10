@@ -41,6 +41,16 @@
   align-items: center;
   padding: 14px 24px;
 }
+.nav-link {
+    /* Remove any hardcoded height: 100% if present */
+    height: auto; 
+    
+    /* Control the button size precisely: e.g., 8px top/bottom, 16px left/right */
+    padding: 8px 16px; 
+    
+    /* Optional: adds nice rounded corners like a proper button pill */
+    border-radius: 4px; 
+}
 
 .bar-item {
   text-decoration: none;
