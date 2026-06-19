@@ -2,20 +2,19 @@
 <html lang>
     <head>
         <title>HEMA</title>
-        <link rel="stylesheet" href="Styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script src="HEMAjs.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <!--Header-->
-    <header class="display-container content-wide" style="max-width: 1500px;" id="home">
-      <img class="image" src="H Bg image.jpg" alt="Morijaschool" width="1500" height="800">
+      <header class="display-container content-wide" style="max-width: 1500px;" id="home">
+        <img class="image" src="H Bg image.jpg" alt="Morijaschool" style="width:100%; height:800px; object-fit:cover;">
 
     <!--Nav Bar-->
-    <div class="top">
-  <div class="bar">
+        <!--Float link to the right, hide them on small screens-->
+        <div class="bar">
           <a href="#home" class="bar-item button">Home</a>
           <a href="#projects" class="bar-item button">Projects</a>
           <a href="#about" class="bar-item button">About</a>
@@ -25,14 +24,16 @@
       </div>
     </div>
 
-   
+    <!--Header-->
+
       <div class="overlay-text">
-            <h1><span>HEMA</span></h1>
-      </div>
-        <!--19/06/26 Logo moved to banner image top left-->
-        <div class ="overlay-image">
-              <img class="logo" src="Logo.jpg" alt="Logo" style="width: 80px; height: 80px;">
-        </div>
+    <h1><span>HEMA</span></h1>
+    </div>
+    <!--19/06/26 Logo moved to banner image top left-->
+    <div class ="overlay-image">
+      <img class="logo" src="Logo.jpg" alt="Logo" style="width: 80px; height: 80px;">
+    </div>
+
     </header>
 
     <!--Page content-->
@@ -45,7 +46,7 @@
     <p><!--Add the about section paragraph-->Rehabilitating vulnerable children and youth affected by gang violence in Lesotho, through mental health support, education, and community healing.</p>
   </div>
 
-    
+
    <!-- Projects Section -->
 <div class="container padding-32" id="projects">
   <h3 class="border-bottom border-light-grey padding-16" style="text-align: center;">Projects</h3>
@@ -69,7 +70,7 @@
     <div class="project-card">
       <div class="project-title">Seriti Sa Makhoarane</div>
       <a href="Projects.html#Seriti"></a>
-  <img src="ssm3.JPG" alt="Seriti sa makhoarane" class="project-img">
+      <img src="Projects and Part.jpg" alt="Modern Villa" class="project-img">
       <p>
         <button class="button light-grey block" onclick="window.location.href='Projects.html#Seriti'">Read more...</button>
       </p>
@@ -83,7 +84,7 @@
       <a href="Projects.html#bana"></a>
       <img src="Bana Bona hImg.JPG" alt="Bana bona head" class="project-img">
       <p>
-        
+
         <button class="button light-grey block" onclick="window.location.href='Projects.html#bana'">Read more...</button>
       </p>
     </div>
@@ -91,60 +92,59 @@
 </div>
 
 
-  
-  
+
+
   <!--Team Section-->
 
   <div class="container padding-32" id="team">
     <h3 class="border-bottom border-light-grey padding-16" style="text-align: center;">Team</h3>
     <p>Meet our dedicated team members</p>
-  <div class="row-padding grayscale">
-    <div class="col l3 m6 margin-bottom">
-      <img src="Litsitso.jpg" alt="Founder Image" style="inline-size:100%; block-size:30%;">
-      <h3>Litsitso Mokhothu</h3>
-      <p class="opacity">Founder</p>
-
-      <p>
-        <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Litsitso'">Learn more about me...</button>
-      </p>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <img src="Motselisi.jpg" alt="Founder Image" style="inline-size:100%; block-size:30%">
-      <h3>Motselisi Moneri</h3>
-      <p class="opacity">Advisori Member</p>
-      <p>
-      
-          <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Motselisi'">Learn more about me...</button>
-    
-      </p>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <img src ="Mpho.jpg" alt="Treasurer" style="inline-size:100%; block-size:30%">
-      <h3>Mpho Koeshe</h3>
-      <p class="opacity">Treasurer</p>
-      <p>
-        <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Mpho'">Learn more about me...</button>
-      </p>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <img src="Refiloe 'Mokele.jpg" alt="Deputy chairperson" style="inline-size:100%; block-size:30%">
-      <h3>Refiloe 'Mokele</h3>
-      <p class="opacity">Deputy chairperson</p>
-      <p>
-        <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Refiloe'">Learn more about me...</button>
-      </p>
-    </div>
-    <div class="col l3 m6 margin-bottom">
-      <img src="Ts'episo.jpg" alt="Secretary" style="inline-size:100%; block-size:30%">
-      <h3>Ts'episo Mahase</h3>
-      <p class="opacity">Advisory Member</p>
-      <p>
-        <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Tsepiso'">Learn more about me...</button>
-      </p>
+    <div class="team-table">
+      <div class="team-row">
+        <div class="team-cell">
+          <img src="Litsitso.jpg" alt="Founder Image" style="inline-size:100%; block-size:30%;">
+          <h3>Litsitso Mokhothu</h3>
+          <p class="opacity">Founder</p>
+          <p>
+            <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Litsitso'">Learn more about me...</button>
+          </p>
+        </div>
+        <div class="team-cell">
+          <img src="Motselisi.jpg" alt="Founder Image" style="inline-size:100%; block-size:30%">
+          <h3>Motselisi Moneri</h3>
+          <p class="opacity">Advisori Member</p>
+          <p>
+            <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Motselisi'">Learn more about me...</button>
+          </p>
+        </div>
+        <div class="team-cell">
+          <img src="Mpho.jpg" alt="Treasurer" style="inline-size:100%; block-size:30%">
+          <h3>Mpho Koeshe</h3>
+          <p class="opacity">Treasurer</p>
+          <p>
+            <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Mpho'">Learn more about me...</button>
+          </p>
+        </div>
+        <div class="team-cell">
+          <img src="Refiloe 'Mokele.jpg" alt="Deputy chairperson" style="inline-size:100%; block-size:30%">
+          <h3>Refiloe 'Mokele</h3>
+          <p class="opacity">Deputy chairperson</p>
+          <p>
+            <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Refiloe'">Learn more about me...</button>
+          </p>
+        </div>
+        <div class="team-cell">
+          <img src="Ts'episo.jpg" alt="Secretary" style="inline-size:100%; block-size:30%">
+          <h3>Ts'episo Mahase</h3>
+          <p class="opacity">Advisory Member</p>
+          <p>
+            <button class="button light-grey block" onclick="window.location.href='TeamMembers.html#Tsepiso'">Learn more about me...</button>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-    <
-  <!--Contact Session-->
+  <!--Contact Section-->
   <div class="container padding-32" id="contact">
     <h3 class="border-bottom border-light-grey padding-16">Contact</h3>
     <p>Lets get in touch</p>
@@ -161,16 +161,18 @@
       <a href="https://wa.me/" target="_blank" class="social-icon">
       <img src="Whatsapp icon.png" alt="WhatsApp" style="height:32px;">
       </a>
+       <p>For any inquiries, please email us at: <a href="mailto:Hema@gmail.com">Hema@gmail.com</a></p>
     </div>
   </div>
-  <div class ="container padding-32">
-    <p>For any inquiries, please email us at: <a href="mailto:Hema@gmail.com">Hema@gmail.com</a></p>
-  </div>
-  <div> 
+
+
+  <div class="container padding-32" id="location" style="text-align:center;">
     <p>Visit our office at:</p>
     <p>Morija, Maseru, Lesotho</p>
     <p>Postal Address: P.O Box 123, Maseru 100, Lesotho</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.490622792634!2d27.47262231500161!3d-29.63821768202052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a5b6f4f4e6b7%3A0x8e8e4c8e4c8e4c8e!2sMorija%20Museum%20%26%20Archives!5e0!3m2!1sen!2sls!4v1696112345678!5m2!1sen!2sls" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="display:flex; justify-content:center;">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3581.490622792634!2d27.47262231500161!3d-29.63821768202052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a5b6f4f4e6b7%3A0x8e8e4c8e4c8e4c8e!2sMorija%20Museum%20%26%20Archives!5e0!3m2!1sen!2sls!4v1696112345678!5m2!1sen!2sls" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 
   <!--footer-->
@@ -180,3 +182,4 @@
 </footer>
 
 </body>
+
