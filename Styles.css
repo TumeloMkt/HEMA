@@ -3,15 +3,16 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px; /* space between image and text */
+  gap: 6px; /* space between image and text */
   text-decoration: none;
+  padding: 4px 8px;
   color: inherit;
 }
 
 /* Circular logo */
 .logo {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ffffff; /* optional: adds a neat border */
@@ -33,6 +34,7 @@
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: top 0.3s;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .bar {
@@ -40,6 +42,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
+  font-family: 'Segoe UI', sans-serif;
+  gap: 50px;
+  background-color: #f5e6ab; /*19/06/26 changed background color to (#f5e6ab)*/
+  width: 100%;
 }
 .nav-link {
     /* Remove any hardcoded height: 100% if present */
