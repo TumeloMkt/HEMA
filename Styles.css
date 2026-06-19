@@ -1,12 +1,12 @@
 /*logo image*/
 /* Brand container (image + text) */
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px; /* space between image and text */
   text-decoration: none;
-  padding: 4px 8px;
   color: inherit;
+  padding: 4px 8px;
   width: fit-content;
 }
 
@@ -39,8 +39,8 @@
 }
 
 .bar {
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  justify-content: center;
   align-items: center;
   padding: 14px 24px;
   font-family: 'Segoe UI', sans-serif;
@@ -58,27 +58,9 @@
   border-radius: 6px; /* rounded corners */
   background-color: grey;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
-.nav-link {
-    /* Remove any hardcoded height: 100% if present */
-    height: auto; 
-    
-    /* Control the button size precisely: e.g., 8px top/bottom, 16px left/right */
-    padding: 8px 16px; 
-    
-    /* Optional: adds nice rounded corners like a proper button pill */
-    border-radius: 4px; 
-}
 
-.bar-item {
-  text-decoration: none;
-  color: #333;
-  padding: 10px 20px; /* smaller padding so border hugs text */
-  border: 1px solid transparent; /* default invisible border to prevent layout shift on hover */
-  border-radius: 6px; /* rounded corners */
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
 
+}
 .bar-item.brand:hover {
   background-color: #f0f0f0; /* light grey background */
   color: #000;
@@ -87,6 +69,7 @@
   padding: 6px;
   justify-content: space-between;
 }
+
 .button {
   font-weight: bold;
   font-size: 16px;
@@ -101,17 +84,14 @@
   display: none;
 }
 
-@media (min-width: 600px) {
-  .hide-small {
-    display: flex;
+@media (min-width: 768px) {
+  .sidebar {
+    display: none;
   }
-}
-
-/* Header image styling */
-.header-image {
-  width: auto;
-  height: auto;
-  display: block;
+  .content-block{
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 /* Text overlay positioning */
@@ -146,6 +126,7 @@ header.display-container {
   position: relative;
 }
 
+
 /* Grid System */
 .row {
   display: flex;
@@ -173,32 +154,8 @@ header.display-container {
     max-width: 100%;
   }
 }
-/* Projects Heading */
 
-.projects-heading {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #333;
-  border-bottom: 3px solid #ccc;
-  display: inline-block;
-  padding-bottom: 10px;
-}
 /* Project Card */
-#project {
-  text-align: center;
-  color: #333;
-  font-family: 'Segoe UI', sans-serif;
-  margin-bottom: 40px;
-}
-
-#project h3 {
-  font-size: 32px;
-  margin-bottom: 16px;
-  border-bottom: 2px solid #ccc;
-  display: inline-block;
-  padding-bottom: 8px;
-}
 .project-card {
   border: 2px solid #e0e0e0; /* Light grey border */
   border-radius: 10px;
@@ -213,6 +170,7 @@ header.display-container {
 }
 
 .project-title {
+  font-family: 'Segoe UI', sans-serif;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -220,7 +178,7 @@ header.display-container {
 
 .project-img {
   width: 100%;
-  height: auto;
+  block-size: auto;
   border-radius: 8px;
 }
 
@@ -263,20 +221,85 @@ header.display-container {
   font-family: 'Segoe UI', sans-serif;
   margin-bottom: 40px;
 }
+
 #team h3 {
-  font-size: 32px;
+  font-size: 20px;
   margin-bottom: 16px;
   border-bottom: 2px solid #ccc;
   display: inline-block;
   padding-bottom: 8px;
   text-decoration: #000;
 }
-.row-padding {
+
+.team-table {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 0 16px;
+}
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.team-cell {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px; /* Reduced padding so content fits inside 50x50 */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-cell:hover {
+  transform: translateY(-5px);
+}
+
+.team-cell img {
+  width: 100%;
+  height: 100px;
+  padding:5px;
+  overflow: hidden;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-cell h3 {
+  font-size: 20px;
+  margin-block-start: 16px;
+}
+
+.team-cell .opacity {
+  color: #777;
+  font-size: 16px;
+  margin-block-end: 8px;
+}
+
+.team-cell .button {
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .team-cell {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-cell {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 
 .col {
@@ -310,7 +333,7 @@ header.display-container {
 /* Team Member Image Styling */
 .col .team-img {
   width: 100%;
-  height: 500px;
+  block-size: 500px;
   object-fit: cover;
   margin-bottom: 16px;
   cursor: pointer;
@@ -369,6 +392,7 @@ header.display-container {
   margin: 0 auto;
   font-family: 'Segoe UI', sans-serif;
   color: #333;
+  text-align: center;
 }
 
 #contact h3 {
@@ -386,30 +410,20 @@ header.display-container {
   margin-bottom: 32px;
 }
 
-/* Contact Form */
-form input[type="text"] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+#contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-form .button.black {
-  background-color: #000;
-  color: #fff;
-  font-size: 16px;
-  padding: 12px;
-  width: 100%;
-  margin-top: 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s;
+#contact .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form .button.black:hover {
-  background-color: #333;
-}
+/* Footer */
 .site-footer {
   background-color: #f1f1f1;
   padding: 24px 16px;
