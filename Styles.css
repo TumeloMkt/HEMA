@@ -565,4 +565,8 @@ body.team-fullscreen-active {
   display: flex;
   flex-wrap: wrap
 }
-
+h1, h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
