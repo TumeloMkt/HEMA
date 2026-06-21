@@ -205,10 +205,11 @@ header.display-container {
 }
 
 #about p {
-  font-size: 18px;
-  line-height: 1.6;
-  max-inline-size: 800px;
-  margin: 0 auto 40px auto;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
 /* Team Members Row */
@@ -408,6 +409,10 @@ header.display-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+#contact,
+#location {
+    text-align: center;
 }
 
 /* Footer */
