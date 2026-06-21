@@ -164,6 +164,7 @@ header.display-container {
 }
 #project h3{
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 .project-card:hover {
   transform: translateY(-5px);
