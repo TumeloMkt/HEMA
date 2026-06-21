@@ -205,6 +205,7 @@ header.display-container {
   border-bottom: 2px solid #ccc;
   display: inline-block;
   padding-bottom: 8px;
+  text-align: center;
 }
 
 #about p {
