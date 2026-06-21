@@ -229,46 +229,39 @@ header.display-container {
   text-decoration: #000;
 }
 
-.team-table {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 0 16px;
+.team-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 
-.team-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  width: 100%;
+.team-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.team-slider::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
 }
 
 .team-cell {
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
+    flex: 0 0 280px;
+    scroll-snap-align: center;
+    background: white;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 10px; /* Reduced padding so content fits inside 50x50 */
+    padding: 15px;
     text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.team-cell:hover {
-  transform: translateY(-5px);
 }
 
 .team-cell img {
-  width: 100%;
-  height: 100px;
-  padding:5px;
-  overflow: hidden;
-  block-size: auto;
-  object-fit: cover;
-  border-radius: 8px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .team-cell h3 {
