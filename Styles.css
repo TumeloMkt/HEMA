@@ -161,6 +161,9 @@ header.display-container {
   padding: 16px;
   background: #fff;
   margin-bottom: 24px;
+  width: 100; /*Fluid sizing*/
+  max-width: 300px;
+  padding: 20px;
 }
 #project h3{
   text-align: center;
