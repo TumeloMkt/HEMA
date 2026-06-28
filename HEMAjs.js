@@ -1,6 +1,21 @@
 
 let lastScrollTop = 0;
 const navbar = document.querySelector('.top');
+const slider = document.getElementById("teamSlider");
+
+document.querySelector(".next").addEventListener("click", () => {
+    slider.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    slider.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+});
 
 function toggleMenu() {
 
