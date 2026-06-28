@@ -16,80 +16,82 @@
   border-radius: 50%;
   border: 2px solid #ffffff; /* optional: adds a neat border */
 }
-/*nav bar*/
-/* Reset some defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth; /* Enables smooth scrolling */
+/* Navigation Bar */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#2b2b2b;
+    padding:15px 30px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-sizing:border-box;
 }
 
-/* Styling for the top nav bar */
-.top {
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s;
-  font-family: 'Segoe UI', sans-serif;
+/* Logo */
+
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
 }
 
-.bar {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 14px 24px;
-  font-family: 'Segoe UI', sans-serif;
-  gap: 50px;
-  background-color: #f5e6ab; /*19/06/26 changed background color to (#f5e6ab)*/
-  width: 100%;
-}
-/* Make the home link use the same background treatment as the other nav links */
-.bar-item {
-  text-decoration: none;
-  text-align: center;     /*Centering text in the bar*/
-  color: #333;
-  padding: 6px 12px; /* smaller padding so border hugs text */
-  border: 1px solid transparent; /* default invisible border to prevent layout shift on hover */
-  border-radius: 6px; /* rounded corners */
-  background-color: grey;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+/* Navigation Links */
 
-
-}
-.bar-item.brand:hover {
-  background-color: #f0f0f0; /* light grey background */
-  color: #000;
-  border-color: #ccc; /* subtle border on hover */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* light shadow */
-  padding: 6px;
-  justify-content: space-between;
+.bar{
+    display:flex;
+    gap:20px;
 }
 
-.button {
-  font-weight: bold;
-  font-size: 16px;
+.bar a{
+    color:white;
+    text-decoration:none;
+    padding:10px;
 }
 
-.right {
-  display: flex;
-  gap: 10px;
+.bar a:hover{
+    background:#f5e6ab;
+    border-radius:5px;
 }
 
-.hide-small {
-  display: none;
+/* Hamburger */
+
+.hamburger{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
 }
 
-@media (min-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-  .content-block{
-    width: 100%;
-    padding: 15px;
-  }
+@media screen and (max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    .bar{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#2b2b2b;
+    }
+
+    .bar.show{
+        display:flex;
+    }
+
+    .bar a{
+        text-align:center;
+        padding:15px;
+        border-top:1px solid #444;
+    }
+
 }
 
 /* Text overlay positioning */

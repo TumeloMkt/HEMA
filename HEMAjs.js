@@ -2,6 +2,14 @@
 let lastScrollTop = 0;
 const navbar = document.querySelector('.top');
 
+function toggleMenu() {
+
+    var menu = document.getElementById("navMenu");
+
+    menu.classList.toggle("show");
+
+}
+
 window.addEventListener('scroll', function() {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   if (scrollTop > lastScrollTop) {
