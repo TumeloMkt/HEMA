@@ -34,7 +34,7 @@
 /* Logo */
 
 .logo{
-    color:white;
+    color:black;
     font-size:24px;
     font-weight:bold;
 }
@@ -47,7 +47,7 @@
 }
 
 .bar a{
-    color:white;
+    color:black;
     text-decoration:none;
     padding:10px;
 }
