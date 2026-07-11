@@ -3,28 +3,31 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Styles.css">
     <script src="HEMAjs.js" defer></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Members</title>
 </head>
 <body>
-    <!--Nav Bar-->
-    <div class="top">
-  <div class="bar white wide padding card">
-    <a href="index.html" class="bar-item button brand">
-      <img class="logo" src="photos/Logo.jpg" alt="Logo">
-      <span> HEMA</span>
-    </a>
-        <!--Float link to the right, hide them on small screens-->
-        <div class="right hide-small">
-          <a href="Projects.html#projects" class="bar-item button">Projects</a>
-          <a href="index.html" class="bar-item button">About</a>
-          <a href="index.html#contact" class="bar-item button">Contact</a>
-        
-        </div>
-      </div>
+   <header>
+<div class = "navbar">
+    
+    <!--Left nav-->
+     <div class="left-nav">
+        <a href="index.html" class="brand">
+          <img class="logo" src="photos/Logo.jpg" alt="Logo">
+          <span> HEMA</span>
+        </a>
     </div>
+
+        <!--right side-->
+        <div class="nav-links">
+          <a href="index.html">About</a>
+          <a href="index.html">Contact</a>
+          <a href="Projects.html">Projects</a>
+        </div>
+    
+    </div>
+</header>
 
     <div class="container">
         <div class="row">
@@ -97,6 +100,62 @@
                 </div>
         </div>
         <style>
+            /* Header */
+            header{
+                width:100%;
+                background:#f8f9fa;
+                box-shadow:0 2px 8px rgba(0,0,0,.08);
+            }
+            
+            /* Navigation container */
+            .navbar{
+                max-width:1200px;
+                margin:auto;
+                padding:12px 24px;
+            
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+            
+            /* Logo + Home */
+            .brand{
+                display:flex;
+                align-items:center;
+                gap:12px;
+            
+                text-decoration:none;
+                color:#222;
+                font-size:20px;
+                font-weight:bold;
+            }
+            
+            /* Logo image */
+            .logo{
+                width:45px;
+                height:45px;
+                border-radius:50%;
+                object-fit:cover;
+            }
+            
+            /* Right navigation */
+            .nav-links{
+                display:flex;
+                align-items:center;
+                gap:30px;
+            }
+            
+            .nav-links a{
+                text-decoration:none;
+                color:#333;
+                font-size:17px;
+                font-weight:500;
+                transition:0.3s;
+            }
+            
+            .nav-links a:hover{
+                color:#0077cc;
+            }
             .square-container.col {
                 max-width: 600px;
                 margin: 0 auto; /* Center each card */
