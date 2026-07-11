@@ -93,12 +93,9 @@
     </div> 
     <style>
         header {
-            display: flex;
-            justify-content: space-between; /* Pushes Logo to the left, links to the right */
-            align-items: center;            /* Perfectly centers all items vertically */
-            padding: 10px 20px;
             background-color: #f8f9fa;      /* Matches your light gray background */
             width: 100%;
+             box-shadow:0 2px 8px rgba(0,0,0,.08);
         }
         /*Navigation container*/
         .navbar{
@@ -128,19 +125,24 @@
             object-fit:cover;
         }
         
-        /* The wrapper surrounding your right-side links (About, Team, Contact) */
-        .nav-links {
-            display: flex;                  /* Forces links to stay in a horizontal row */
-            align-items: center;            /* Centers them vertically */
-            gap: 20px;                      /* Creates clean, uniform space between links */
-            flex-wrap: nowrap;              /* Prevents links from breaking onto a second line */
+       /* Right navigation */
+        .nav-links{
+            display:flex;
+            align-items:center;
+            gap:30px;
         }
         
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            white-space: nowrap;            /* Prevents long text like "Team..." from breaking into two lines */
+        .nav-links a{
+        text-decoration:none;
+        color:#333;
+        font-size:17px;
+        font-weight:500;
+        transition:0.3s;
         }
+        .nav-links a:hover{
+            color:#0077cc;
+        }
+
         .project-description {
             text-align: justify;
             text-justify: inter-word;
