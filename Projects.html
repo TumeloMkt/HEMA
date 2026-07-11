@@ -11,20 +11,24 @@
 <body>
     <!--Nav Bar-->
 <header>
- <div class="bar white wide padding card">
-  <div class="logo-area">
-    <a href="index.html" class="bar-item button brand">
-      <img class="logo" src="photos/Logo.jpg" alt="Logo">
-      <span> HEMA</span>
-    </a>
+<div class = "navbar">
+    
+    <!--Left nav-->
+     <div class="left-nav">
+        <a href="index.html" class="brand">
+          <img class="logo" src="photos/Logo.jpg" alt="Logo">
+          <span> HEMA</span>
+        </a>
     </div>
-</div>
-        <!--Float link to the right, hide them on small screens-->
+
+        <!--right side-->
         <div class="nav-links">
-          <a href="index.html" class="bar-item button">About</a>
-          <a href="index.html" class="bar-item button">Contact</a>
-          <a href="TeamMembers.html" class="bar-item button">Team...</a>
+          <a href="index.html">About</a>
+          <a href="index.html">Contact</a>
+          <a href="TeamMembers.html">Team...</a>
         </div>
+    
+    </div>
 </header>
     
     <div class="container">
@@ -96,11 +100,32 @@
             background-color: #f8f9fa;      /* Matches your light gray background */
             width: 100%;
         }
-        .logo-area{
-            width: 28px;
-            height: 28px;
-            object-fit: cover;
-            border-radius: 50%;
+        /*Navigation container*/
+        .navbar{
+            max-width: 1200px;
+            margin: auto;
+            padding:12px 24px;
+
+            display:flex;
+            justify-content: space-between;
+            align-item:center;
+        }
+        /*logo + home*/
+        .brand{
+            display:flex;
+            align-item: center;
+            gap:12px;
+            text-decoration: none;
+            color:#222;
+            font-size:20px;
+            font-weight:bold;
+        }
+        /*Logo image*/
+        .logo{
+            width: 45px;
+            height: 45px;
+            border-radius:50%;
+            object-fit:cover;
         }
         
         /* The wrapper surrounding your right-side links (About, Team, Contact) */
