@@ -10,20 +10,22 @@
 </head>
 <body>
     <!--Nav Bar-->
+<header>
     <div class="top">
-  <div class="bar white wide padding card">
+  <div class="logo-area">
     <a href="index.html" class="bar-item button brand">
       <img class="logo" src="photos/Logo.jpg" alt="Logo">
       <span> HEMA</span>
     </a>
         <!--Float link to the right, hide them on small screens-->
-        <div class="right hide-small">
+        <div class="nav-links">
           <a href="index.html" class="bar-item button">About</a>
           <a href="index.html" class="bar-item button">Contact</a>
           <a href="TeamMembers.html" class="bar-item button">Team...</a>
         </div>
       </div>
     </div>
+</header>
     
     <div class="container">
         <div class="row">
@@ -86,6 +88,28 @@
         </div>
     </div> 
     <style>
+        header {
+            display: flex;
+            justify-content: space-between; /* Pushes Logo to the left, links to the right */
+            align-items: center;            /* Perfectly centers all items vertically */
+            padding: 10px 20px;
+            background-color: #f8f9fa;      /* Matches your light gray background */
+            width: 100%;
+        }
+        
+        /* The wrapper surrounding your right-side links (About, Team, Contact) */
+        .nav-links {
+            display: flex;                  /* Forces links to stay in a horizontal row */
+            align-items: center;            /* Centers them vertically */
+            gap: 20px;                      /* Creates clean, uniform space between links */
+            flex-wrap: nowrap;              /* Prevents links from breaking onto a second line */
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            white-space: nowrap;            /* Prevents long text like "Team..." from breaking into two lines */
+        }
         .project-description {
             text-align: justify;
             text-justify: inter-word;
