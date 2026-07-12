@@ -121,8 +121,8 @@ body {
 /*Image overlay positioning*/
 .overlay-image{
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 20%;
+  left: 20%;
   transform: translate(-50%, -50%);
 }
 
