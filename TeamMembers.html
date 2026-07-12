@@ -19,6 +19,7 @@
                 max-width:1200px;
                 margin:auto;
                 padding:12px 24px;
+                position:relative;
             
                 display:flex;
                 justify-content:space-between;
@@ -67,9 +68,36 @@
 
             .hamburger{
                 display:none;
-                color:white;
+                color:#444;
                 font-size:30px;
                 cursor:pointer;
+            }
+
+            @media screen and (max-width: 768px) {
+                .hamburger {
+                    display:block;
+                }
+
+                .nav-links {
+                    display:none;
+                    flex-direction:column;
+                    position:absolute;
+                    top:70px;
+                    left:0;
+                    width:100%;
+                    background:#f8f9fa;
+                    padding:12px 0;
+                    box-shadow:0 4px 12px rgba(0,0,0,.08);
+                }
+
+                .nav-links.show {
+                    display:flex;
+                }
+
+                .nav-links a {
+                    text-align:center;
+                    padding:12px 15px;
+                }
             }
             
            
@@ -248,8 +276,11 @@
            &#9776;
         </div>
     
+        <!--Hamburger Icon-->
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
         <!--right side-->
-        <div class="nav-links">
+        <div class="nav-links" id="navMenu">
           <a href="index.html">About</a>
           <a href="index.html">Contact</a>
           <a href="Projects.html">Projects</a>

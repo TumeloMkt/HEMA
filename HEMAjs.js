@@ -21,7 +21,9 @@ function toggleMenu() {
 
     var menu = document.getElementById("navMenu");
 
-    menu.classList.toggle("show");
+    if (menu) {
+        menu.classList.toggle("show");
+    }
 
 }
 
